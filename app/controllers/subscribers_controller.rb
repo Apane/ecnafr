@@ -29,6 +29,7 @@ class SubscribersController < ApplicationController
   end
 
   def unsubscribe
+    raise params[:unsubscribe_hash].inspect
     subscriber = Subscriber.find_by_unsubscribe_hash(params[:unsubscribe_hash])
     if subscriber.update_attributes(:subscription, false)
       redirect_to root_path

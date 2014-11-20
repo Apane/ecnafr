@@ -4,8 +4,10 @@ class Subscriber < ActiveRecord::Base
   belongs_to :category  
   has_many :quote_histories
 
-  validates :email, presence: true
   validates :category_id, presence: true
+  validates_presence_of :email
+  validates_uniqueness_of :email, :case_sensitive => false
+  validates_format_of :email, :with => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
 
   def choose_quote(cat)
     quote = cat.quotes.uniq_quote_for(self.id).order("RANDOM()").first 
