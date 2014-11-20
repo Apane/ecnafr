@@ -1,16 +1,16 @@
 Rails.application.configure do
 
   # Action Mailer for Production
-  config.action_mailer.default_url_options = { :host => 'motiv8.t.proxylocal.com' }
+  config.action_mailer.default_url_options = { :host => 'motiv8.io' }
 
-  Rails.application.routes.default_url_options[:host] = 'motiv8.t.proxylocal.com'
+  Rails.application.routes.default_url_options[:host] = 'motiv8.io'
 
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
 
 
-  config.action_mailer.default_url_options = { :host => 'motiv8.t.proxylocal.com' }
+  config.action_mailer.default_url_options = { :host => 'motiv8.io' }
   config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
@@ -22,7 +22,7 @@ Rails.application.configure do
     :enable_starttls_auto => true
   }
 
-  ActionMailer::Base.default :from => "Motiv8 <no-reply@motiv8.com>"
+  ActionMailer::Base.default :from => "Motiv8 <no-reply@motiv8.io>"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
