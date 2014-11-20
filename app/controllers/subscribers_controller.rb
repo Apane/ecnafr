@@ -28,6 +28,11 @@ class SubscribersController < ApplicationController
   def destroy
   end
 
+  def unsubscribe
+    subscriber = Subscriber.find_by_unsubscribe_hash(params[:unsubscribe_hash])
+    subscriber.update_attribute(:subscription, false)
+  end
+
   private
 
   def subscriber_params

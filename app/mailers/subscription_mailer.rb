@@ -12,10 +12,10 @@ class SubscriptionMailer < ActionMailer::Base
     mail to: email, subject: "test"
   end
 
-  def sendmyemail(email, category, quote, subscribers)
+  def sendmyemail(email, category, quote, subscriber)
     @category = category
     @quote = quote
-    @subscribers = subscribers
+    @subscriber = subscriber
     @email = email
 
     mail to: email, subject: 'Your daily ' + @category.name.to_s  + ' quote!'

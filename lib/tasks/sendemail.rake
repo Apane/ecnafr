@@ -6,11 +6,11 @@ task :email => :environment do
       category.subscribers.each do |subscriber|
       quote = subscriber.choose_quote(category)
     if quote  # if quote found then send email
-      SubscriptionMailer.sendmyemail(subscriber.email, category, quote.body, category.subscribers).deliver    
+      SubscriptionMailer.sendmyemail(subscriber.email, category, quote.body, subscriber).deliver    
     else
       Category.all.each do |category|
         category.subscribers.each do |subscriber|
-          SubscriptionMailer.sendmyemail(subscriber.email, category, category.quotes.order("RANDOM()").first.body, category.subscribers).deliver          
+          SubscriptionMailer.sendmyemail(subscriber.email, category, category.quotes.order("RANDOM()").first.body, subscriber).deliver          
           end
         end
       end

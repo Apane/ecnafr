@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   end
 
   resources :subscribers
+
+  get 'subscribers/unsubscribe/:unsubscribe_hash' => 'subscribers#unsubscribe', :as => 'unsubscribe'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
