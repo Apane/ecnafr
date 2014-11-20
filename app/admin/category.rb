@@ -9,7 +9,7 @@ ActiveAdmin.register Category do
   controller do
 
     def permitted_params
-      params.permit(:category => [:email, :category_id, :created_at, :updated_at,])
+      params.permit(:category => [:id, :name, :category_type, :created_at, :updated_at])
     end
   end
 
