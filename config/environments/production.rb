@@ -13,14 +13,16 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'motiv8.t.proxylocal.com' }
   config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.gmail.com',
+    :address        => 'smtp.sendgrid.net',
     :port           => '587',
-    :domain         => 'gmail.com',
-    :user_name      => "anthony.panepinto101@gmail.com", #ENV['SENDGRID_USERNAME'],
-    :password       => "lilmaine0418", #ENV['SENDGRID_PASSWORD'],
     :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
+
+  ActionMailer::Base.default :from => "Motiv8 <no-reply@motiv8.com>"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
