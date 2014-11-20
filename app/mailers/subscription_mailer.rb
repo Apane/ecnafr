@@ -1,5 +1,5 @@
 class SubscriptionMailer < ActionMailer::Base
-  default from: "do-not-reply@motiv8.com"
+  default from: "Motiv8 <no-reply@motiv8.com>"
   layout 'mail'
 
   # Subject can be set in your I18n file at config/locales/en.yml

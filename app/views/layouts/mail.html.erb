@@ -29,12 +29,12 @@
   <div class="container">
     <div class="header">
       <h2 class="branding">Motiv8</h2>
-      <%#= image_tag 'logo.png', class: 'logo' %>
+      <%= image_tag 'logo.png', class: 'logo' %>
       <div class="credo">Learn from the greatest thinkers of the past and present</div>
     </div>
     <div class="main"><%= yield %></div>
     <div class="footer">
-      <span>&copy;2014 Motiv8 Inc, 27001 Paseo Activo, Studio, San Juan Capistrano, CA 92675</span>
+      <span>&copy;2015 Motiv8 Inc, <%= link_to 'un-subscribe', '#'></span>
     </div>
   </div>
 </body>
