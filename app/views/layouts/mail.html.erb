@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Motiv8</title>
+<link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<style type="text/css">
+  body{font-family: 'cavier', 'Source Sans Pro', sans-serif;background: #eeeeee;}
+  .container{width: 570px;margin: auto;padding: 40px 0;}
+  .main {padding: 70px 100px;font-weight: 300;background: #fff;}
+  .header{background: #cc0000;padding: 10px 0 5px 25px;min-height: 40px;}
+  .logo{float: left;}
+  .credo{color: white;font-style: italic;font-size: 12px;margin-left: 230px;margin-top: 10px;}
+  .footer {background: #7e7e7e;text-align: center;color: #fff;font-weight: 100;padding: 15px 0;}
+  .h8{font-size: 28px; font-weight: 300;}
+  .red, .red a{color: #d93f3f;text-decoration: none;}
+  div.text{font-size: 20px;color:#616161;margin-bottom: 5px;}
+  .justify{text-align: justify;}
+  .blue, .blue a{color: #3fb2ff;}
+  .get_started{background: #66ccff;color: #fff;text-decoration: none;padding: 10px 30px;font-weight: 400;font-size: 22px;}
+  .branding {color: white; font-weight: normal;}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2 class="branding">Motiv8</h2>
+      <%#= image_tag 'logo.png', class: 'logo' %>
+      <div class="credo">Learn from the greatest thinkers of the past and present</div>
+    </div>
+    <div class="main"><%= yield %></div>
+    <div class="footer">
+      <span>&copy;2014 Motiv8 Inc, 27001 Paseo Activo, Studio, San Juan Capistrano, CA 92675</span>
+    </div>
+  </div>
+</body>
+</html>

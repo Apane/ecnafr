@@ -1,0 +1,106 @@
+// Place all the styles related to the landing controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@font-face {
+  font-family: 'cavier';
+  src: font-url('caviardreams-webfont.eot');
+  src: font-url('caviardreams-webfont.eot') format('embedded opentype'),
+ 	   font-url('caviardreams-webfont.woff') format('woff'),
+       font-url('caviardreams-webfont.ttf') format('truetype'),
+       font-url('caviardreams-webfont.svg#cavier') format('svg');
+}
+
+
+.email-input {
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 10px 5px 10px 5px;
+    font-family: 'cavier';
+}
+
+.email-input2 {
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 10px 36px 10px 36px;
+	    font-family: 'cavier';
+
+}
+
+input {
+    border: 2px solid white; 
+   	border-radius: 10px;
+    padding: 7px 7px 7px 7px;
+	background: rgb(255, 255, 255) transparent;
+	/* nice browsers */
+	background: rgba(255, 255, 255, 0.8);  
+	margin: 0 0 10px 0;
+}
+
+.landing-bg {
+	background: asset-url("446956.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.landing-bg2 {
+	background: asset-url("303342.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+
+.size {	height: 700px;}
+
+.get_motivated {
+    font-family: 'cavier';
+	text-align: center;
+	margin: 0 auto;
+	font-size: 30px;
+	padding: 5px 22px 5px 22px;
+	border-radius: 10px;
+    border-bottom: 3px solid #A52A2A;
+}
+
+.get_motivated2 {
+    font-family: 'cavier';
+	text-align: center;
+	width: 260px;
+	margin: 0 auto;
+	font-size: 30px;
+	padding: 2px 5px 2px 5px;
+}
+
+/* The CSS */
+select {
+    padding:7px 40px 7px 40px;
+    margin: 0;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+	background: rgb(255, 255, 255) transparent;
+	/* nice browsers */
+	background: rgba(255, 255, 255, 0.8);    
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    border: 2px solid white; 
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}

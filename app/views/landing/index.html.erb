@@ -1,0 +1,79 @@
+
+<div class="landing-bg2 size">
+<div class="container-fluid">
+
+<div class="row">
+  <div class="push-down">
+
+
+  <div class="col-xs-12 col-md-12">
+  <h1 style="color: white; text-align: center; font-family: 'cavier'; font-size: 60px;">
+  Motiv8
+  </h1>
+  </div>
+  <br/><br/><br/>  
+
+
+  <div class="col-xs-3 col-md-2"></div>
+  <div class="col-xs-1 col-md-2"></div>
+  <div class="col-xs-4 col-md-4">
+  <h4 style="color: white; text-align: center;" id="goal" type="text" value="">
+  Learn from the greatest thinkers of the past and present.
+  </h4>
+  </div>
+  <br/><br/><br/>
+
+  <div class="col-xs-12 col-md-12">
+  <h4 style="color: white; text-align: center;" id="goal" type="text" value="">
+ <div class="styled email-input2">
+      <%= form_tag landing_index_path, method: 'get' do %>
+      <%= select_tag "category_id", options_for_select(@category.map{ |category| [category.name, category.id] }, selected: params["category_id"]) %>
+    </div>
+  </h4>
+  </div>
+
+  <div class="col-xs-6 col-md-12">
+  <div class="display">
+    <% if @quotes %>
+    <% @quotes.each do %>
+      <%= @quote.body %>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+<br/><br/><br/> 
+
+  <div class="col-xs-12 col-md-12 email-input">
+    <input id="goal" type="text" value="" placeholder="Enter your email" style="text-align: center;"></div>
+  </div>
+  <br/><br/><br/><br/><br/>
+
+  <div class="get_motivated2">
+     <%= submit_tag "Get Motivated", class: "get_motivated btn-danger" %>
+    <% end %>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+<div class="landing-bg size">
+<div class="container-fluid">
+
+<div class="row">
+  <div class="push-down">
+  <div class="col-xs-12 col-md-12">
+    <h2 style="text-align: center; color: white;">
+      Testimonials
+    </h2>
+  </div>
+  <br/><br/><br/><br/>
+
+  <div class="col-xs-12 col-md-12 email-input">
+    <input id="goal" type="text" value="" placeholder="Enter your email" style="text-align: center;"></div>
+  </div>
+</div>
+
+</div>
+</div>

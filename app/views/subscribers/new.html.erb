@@ -1,0 +1,103 @@
+<div class="landing-bg2 size">
+<div class="container-fluid">
+
+<div class="row">
+  <div class="push-down">
+
+
+  <div class="col-xs-12 col-md-12">
+  <h1 style="color: white; text-align: center; font-family: 'cavier'; font-size: 60px;">
+  Motiv8
+  </h1>
+  </div>
+  <br/><br/><br/>  
+
+
+  <div class="col-xs-3 col-md-2"></div>
+  <div class="col-xs-1 col-md-2"></div>
+  <div class="col-xs-4 col-md-4">
+  <h4 style="color: white; text-align: center;" id="goal" type="text" value="">
+  Learn from the greatest thinkers of the past and present.
+  </h4>
+  </div>
+  <br/><br/><br/>
+
+  <div class="col-xs-12 col-md-12">
+  <h4 style="color: white; text-align: center;" id="goal" type="text" value="">
+
+<div class="styled email-input2">
+    <%= form_for @subscriber do |f| %>
+    <% if @subscriber.errors.any? %>
+      <div class="errorExplanation" style="color: white;">
+      <h2><%= pluralize(@subscriber.errors.count, 'error') %> encountered:</h2>
+      <ul>
+      <% @subscriber.errors.full_messages.each do |m| %>
+      <li><%= m %></li>
+     <% end %>
+     </ul>
+     </div>
+  <% end %>
+  <%= f.select(:category_id, Category.all.map { |c| [c.name, c.id] }, {prompt: 'Please select'}, {class: 'styled email-input2'}) %>
+</div>
+
+</div>
+
+  <div class="col-xs-6 col-md-12">
+  <div class="display">
+    <% if @quotes %>
+    <% @quotes.each do %>
+      <%= @quote.body %>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+<br/><br/><br/> 
+
+  <div class="col-xs-12 col-md-12 email-input" style="text-align: center;">
+  <p>
+  <%= f.text_field :email, placeholder: "Enter your email", class: "email-input"  %>
+  </p>
+
+  </div>
+  </div>
+  <br/><br/><br/><br/><br/>
+
+  <div class="get_motivated2">
+     <%= f.submit "Get Motivated", class: "get_motivated btn-danger" %>
+    <% end %>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+<div class="landing-bg size">
+<div class="container-fluid">
+
+<div class="row">
+  <div class="push-down">
+  <div class="col-xs-12 col-md-12">
+    <h2 style="text-align: center; color: white; font-family: 'cavier'">
+      Testimonials
+    </h2>
+
+  <div class="col-xs-3 col-md-3"></div>
+  <div class="col-xs-1 col-md-1"></div>
+  <div class="col-xs-12 col-md-4">
+   <!--  <h5 style="text-align: center; color: white; font-family: 'cavier'">Motiv8 came to be naturally as a result of years of gathering maxims, and powerful aphorisms from the various books I've read. I found myself going back to these quotes periodically whenever I felt the need for some motivation and heightened thought. It only seemed natural to automate that process and create something to deliver a daily dose of it, thus Motiv8 was born.</h5>
+
+    <h5 style="text-align: center; color: white; font-family: 'cavier'">
+    The geography of my reading spans from business literature (economics, management, entrepreneurship, start-ups, leadership), to hard and soft sciences (psychology, physics, mathematics, statistics), all the way to spirtuality. I've gotten quite efficient at picking out the "Big Picture Points" in any given piece of literature. I hope that these gems of wisdom motivate, inspire and ultimately shape you 
+    to become a more well rounded, wise, and thoughtful human-being!</h5> -->
+  </div>
+  </div>
+  <br/><br/><br/><br/>
+
+  <div class="col-xs-12 col-md-12 email-input">
+   </div>
+  </div>
+</div>
+
+</div>
+</div>
