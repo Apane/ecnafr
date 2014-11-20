@@ -4,6 +4,6 @@ class Quote < ActiveRecord::Base
 
   validates :title, presence: true
 
-  scope :uniq_quote_for, Proc.new {|subscriber_id| includes(:quote_histories).where.not(quote_history: {subscriber_id: subscriber_id})}
+  scope :uniq_quote_for, Proc.new {|subscriber_id| includes(:quote_histories).where.not(quote_histories: {subscriber_id: subscriber_id})}
 
 end
