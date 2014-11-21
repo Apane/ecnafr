@@ -8,9 +8,11 @@ class SubscribersController < ApplicationController
 
   def create
     @subscriber = Subscriber.new(subscriber_params)
-
+    email = @subscriber.email if @subscriber.email.present?
+    
     if @subscriber.save
-      redirect_to root_path
+      SubscriptionMailer.notify_subscription_created(email).deliver
+      redirect_to root_path, notice: "You've successfully subscribed!"
     else
       render :new
     end

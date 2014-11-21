@@ -12,8 +12,8 @@ Rails.application.configure do
   domain: "gmail.com",
   authentication: "plain",
   enable_starttls_auto: true,
-  user_name: ENV["GMAIL_USERNAME"],
-  password: ENV["GMAIL_PASSWORD"]
+  user_name: "anthony.panepinto101@gmail.com",
+  password: "lilmaine0418"
   }
   # Settings specified here will take precedence over those in config/application.rb.
 
