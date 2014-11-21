@@ -104,3 +104,74 @@ select {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     select {padding-right:18px}
 }
+
+.modal-open {
+  overflow:auto;
+}
+
+body.modal-open,
+.modal-open .navbar-fixed-top,
+.modal-open .navbar-fixed-bottom {
+  margin-right: 0px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  display: none;
+  overflow:hidden;
+
+}
+
+
+.modal-content {
+position: relative;
+background: -moz-linear-gradient(left, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(53, 53, 53, 0.88)), color-stop(100%, rgba(53, 53, 53, 0.88)));
+background: -webkit-linear-gradient(left, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
+background: -o-linear-gradient(left, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
+background: -ms-linear-gradient(left, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
+background: linear-gradient(to right, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0353535', endColorstr='#e0353535',GradientType=1 );
+border: none;
+border-radius: 0;
+outline: none;
+-webkit-box-shadow: none;
+box-shadow: none;
+background-clip: padding-box;
+
+}
+
+.modal-content2 {
+position: relative;
+background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.60)), color-stop(100%, rgba(0, 0, 53, 0.60)));
+background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+background: -o-linear-gradient(left, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+background: linear-gradient(to right, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#000',GradientType=1 );
+border: none;
+border-radius: 0;
+outline: none;
+-webkit-box-shadow: none;
+box-shadow: none;
+background-clip: padding-box;
+
+}
+
+.modal-content .queuepagevideo {
+    margin-left:1px !important;
+}
+
+.modal-header {
+    border: none;
+}
+
+.navbar.transparent.navbar-inverse .navbar-inner {
+   background: rgba(0,0,0,0.4);
+}
