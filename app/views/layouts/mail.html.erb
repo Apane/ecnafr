@@ -33,10 +33,7 @@
     </div>
     <div class="main"><%= yield %></div>
     <div class="footer">
-      <span>&copy;2015 Motiv8 Inc, 
-      <% if @subscriber.unsubscribe_hash.present?%> 
-      <%= link_to 'un-subscribe', unsubscribe_url(@subscriber.unsubscribe_hash) %> 
-      <% end %></span>
+      <span>&copy;2015 Motiv8 Inc, <%= link_to 'un-subscribe', unsubscribe_url(@subscriber.unsubscribe_hash) %></span>
 
     </div>
   </div>
