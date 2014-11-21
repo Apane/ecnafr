@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120204059) do
+ActiveRecord::Schema.define(version: 20141121190937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(version: 20141120204059) do
     t.datetime "updated_at"
     t.integer  "category_id"
     t.string   "unsubscribe_hash"
+    t.boolean  "subscription"
   end
 
   add_index "subscribers", ["category_id"], name: "index_subscribers_on_category_id", using: :btree
