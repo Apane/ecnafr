@@ -10,8 +10,10 @@ task :email => :environment do
     else
       Category.all.each do |category|
         category.subscribers.each do |subscriber|
+          if subscriber.subscription.present?
           SubscriptionMailer.sendmyemail(subscriber.email, category, category.quotes.order("RANDOM()").first.body, subscriber).deliver          
           end
+        end
         end
       end
     end
