@@ -16,17 +16,6 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-
-$(document).ready(function(){
-   $("#subscriber_category_id").change(function(){
-      var value = $(this).val();
-      if(value == "Business/Wealth")
-      {
-         $('.landing-bg2').style.css = "background: asset-url('439022.jpg') no-repeat center center fixed;"
-       }
-      if(value=="Business/Wealth")
-      {
-         $('.landing-bg2').style.css = "background: asset-url('439022.jpg') no-repeat center center fixed;"
-      }
-   })
-})
+$(document).ready(function() {
+  $('.alert.alert-success').delay(3000).fadeOut('fast');
+  });
