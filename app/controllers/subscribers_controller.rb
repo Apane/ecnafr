@@ -30,7 +30,7 @@ class SubscribersController < ApplicationController
 
   def unsubscribe
    subscriber = Subscriber.find_by_unsubscribe_hash(params[:unsubscribe_hash])
-   if subscriber and subscriber.update_attributes(:subscription, false)
+   if subscriber.update_attribute(:subscription, false)
      redirect_to root_path
    elsif subscriber.nil?
      flash[:notice] = "Subscription not found"
