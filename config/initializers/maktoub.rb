@@ -1,11 +1,11 @@
-Maktoub.from = "Test Sender <maktoub@example.com>" # the email the newsletter is sent from
+#Maktoub.from = "Test Sender <maktoub@example.com>" # the email the newsletter is sent from
 # Maktoub.twitter_url = "http://twitter.com/#!/twitter" # your twitter page
 # Maktoub.facebook_url = "http://www.facebook.com/facebook" # your facebook page
 # Maktoub.linkedin_url = "http://www.linkedin.com/company/linkedin" # your linkedin page
-Maktoub.subscription_preferences_url = "http://example.com/manage_subscriptions" #subscribers management url
+#Maktoub.subscription_preferences_url = "http://example.com/manage_subscriptions" #subscribers management url
 # Maktoub.logo = "logo.jpg" # path to your logo asset
-Maktoub.home_domain = "localhost:3000" # your domain
-Maktoub.app_name = "Motivate.io" # your app name
+#Maktoub.home_domain = "localhost:3000" # your domain
+#Maktoub.app_name = "Motivate.io" # your app name
 # Maktoub.unsubscribe_method = "unsubscribe" # method to call from unsubscribe link (doesn't include link by default)
 
 # pass a block to subscribers_extractor that returns an object that  reponds to :name and :email
