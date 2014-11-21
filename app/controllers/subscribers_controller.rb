@@ -42,17 +42,13 @@ end
   private
 
   def subscriber_params
-    params.require(:subscriber).permit(:email, :category_id, :created_at, :updated_at, :category => {},
+    params.require(:subscriber).permit(:email, :category_id, :subscription, :created_at, :updated_at, :category => {},
                                       category_attributes: [:id, :name, :category_type, :created_at, :updated_at])
   end
 
    def permitted_params
-    params.permit(:email, :category_id, :created_at, :updated_at, :category => {},
+    params.permit(:email, :category_id, :created_at, :subscription, :updated_at, :category => {},
                                       category_attributes: [:id, :name, :category_type, :created_at, :updated_at])
-  end
-
-  def attr_params_category
-    params.require(:account).permit(category_attributes: [:id, :name, :category_type, :created_at, :updated_at, :category => {}])
   end
 
 end
