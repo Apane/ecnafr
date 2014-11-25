@@ -1,15 +1,20 @@
 Rails.application.routes.draw do
 
+  devise_for :users, controllers: { registrations: 'registrations' }
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root to: "subscribers#new"
   get '/landing', to: "landing#index", as: 'landing_index'
 
-  resources :quotes do
-    resources :categories
+  resources :categories do
+    resources :quotes
   end
 
+  get '/add_recaptcha', to: 'user_steps#add_recaptcha'
+
   resources :subscribers
+  resources :user_steps, except: [:update]
+  patch '/user_steps', to: 'user_steps#update', as: 'update_user_steps'
 
   get 'subscribers/unsubscribe/:unsubscribe_hash' => 'subscribers#unsubscribe', :as => 'unsubscribe'
 

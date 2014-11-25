@@ -7,9 +7,9 @@ class SubscriptionMailer < ActionMailer::Base
   #
   #   en.subscription_mailer.quotes.subject
   #
-  def quotes(email, quote)
-    @quote = quote
-    mail to: email, subject: "test"
+  def notify_subscription_created(email)
+    @email = email
+    mail to: email, subject: 'Your subscription confirmation'
   end
 
   def sendmyemail(email, category, quote, subscriber)

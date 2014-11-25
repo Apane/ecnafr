@@ -16,17 +16,29 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+$(document).ready(function() {
+  $('.alert.alert-success').delay(3000).fadeOut('fast');
+  $('.alert.alert-danger').delay(3000).fadeOut('fast');
+  });
 
-$(document).ready(function(){
-   $("#subscriber_category_id").change(function(){
-      var value = $(this).val();
-      if(value == "Business/Wealth")
-      {
-         $('.landing-bg2').style.css = "background: asset-url('439022.jpg') no-repeat center center fixed;"
-       }
-      if(value=="Business/Wealth")
-      {
-         $('.landing-bg2').style.css = "background: asset-url('439022.jpg') no-repeat center center fixed;"
-      }
-   })
-})
+(function ($) {
+  $(document).ready(function(){
+
+    // hide .navbar first
+    $(".navbar_fade").hide();
+
+    // fade in .navbar
+    $(function () {
+        $(window).scroll(function () {
+
+                 // set distance user needs to scroll before we start fadeIn
+            if ($(this).scrollTop() > 600) {
+                $('.navbar_fade').fadeIn();
+            } else {
+                $('.navbar_fade').fadeOut();
+            }
+        });
+    });
+
+});
+  }(jQuery));

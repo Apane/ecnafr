@@ -1,103 +1,106 @@
+<header>
 <div class="landing-bg2 size">
 <div class="container-fluid">
+  <%= render 'layouts/messages' %>
+  <%= render 'layouts/headers/header' %>
+  <br/><br/><br/>  
+  <br/><br/><br/>
+
+  <div id="scrolly">
+    <div class="scroll one"></div>
+    <div class="scroll two"></div>
+    <div class="scroll three"></div>
+  </div>
 
 <div class="row">
   <div class="push-down">
+    <div class="col-xs-12 col-md-12">
+      <h1 style="color: white; text-align: center; font-family: 'cavier'; font-size: 65px; font-weight: 900;">
+        <%= image_tag('logo-thin.png', class: "logo-style") %>
+      </h1>
+    </div>
 
-
-  <div class="col-xs-12 col-md-12">
-  <h1 style="color: white; text-align: center; font-family: 'cavier'; font-size: 60px;">
-  Motiv8
-  </h1>
-  </div>
   <br/><br/><br/>  
 
 
   <div class="col-xs-3 col-md-2"></div>
   <div class="col-xs-1 col-md-2"></div>
-  <div class="col-xs-4 col-md-4">
-  <h4 style="color: white; text-align: center;" id="goal" type="text" value="">
-  Learn from the greatest thinkers of the past and present.
-  </h4>
-  </div>
+    <div class="col-xs-4 col-md-4">
+      <h4 style="color: white; text-align: center; font-weight: 300; font-family: 'cavier'" id="goal" type="text" value="">
+        Share with others.
+      </h4>
+    </div>
   <br/><br/><br/>
 
   <div class="col-xs-12 col-md-12">
-  <h4 style="color: white; text-align: center;" id="goal" type="text" value="">
+    <h4 style="color: white; text-align: center;" id="goal" type="text" value="">
 
-<div class="styled email-input2">
-    <%= form_for @subscriber do |f| %>
-    <% if @subscriber.errors.any? %>
-      <div class="errorExplanation" style="color: white;">
-      <h2><%= pluralize(@subscriber.errors.count, 'error') %> encountered:</h2>
-      <ul>
-      <% @subscriber.errors.full_messages.each do |m| %>
-      <li><%= m %></li>
-     <% end %>
-     </ul>
-     </div>
-  <% end %>
-  <%= f.select(:category_id, Category.all.map { |c| [c.name, c.id] }, {prompt: 'Please select'}, {class: 'styled email-input2'}) %>
-</div>
+      <div class="styled email-input2">
+        <%= form_for @subscriber do |f| %>
+          <% if @subscriber.errors.any? %>
+            <div class="errorExplanation" style="color: white;">
+              <h2><%= pluralize(@subscriber.errors.count, 'error') %> encountered:</h2>
+              <ul>
+                <% @subscriber.errors.full_messages.each do |m| %>
+                <li><%= m %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+        <%= f.select(:category_id, Category.all.map { |c| [c.name, c.id] }, {prompt: 'Select category'}, {class: 'styled email-input2'}) %>
+      </div>
+    </h4>
+  </div> 
 
-</div>
-
-  <div class="col-xs-6 col-md-12">
-  <div class="display">
-    <% if @quotes %>
-    <% @quotes.each do %>
-      <%= @quote.body %>
-    <% end %>
-    <% end %>
-  </div>
-</div>
 <br/><br/><br/> 
 
   <div class="col-xs-12 col-md-12 email-input" style="text-align: center;">
-  <p>
-  <%= f.text_field :email, placeholder: "Enter your email", class: "email-input"  %>
-  </p>
+    <p>
+      <%= f.text_field :email, placeholder: "Email", class: "email-input"  %>
+    </p>
+  </div>
 
-  </div>
-  </div>
   <br/><br/><br/><br/><br/>
 
-  <div class="get_motivated2">
-     <%= f.submit "Get Motivated", class: "get_motivated btn-danger" %>
+
+     <%= f.submit "Subscribe", class: "get_motivated2" %>
     <% end %>
+
+
   </div>
 
 </div>
 
 </div>
-</div>
 
-<div class="landing-bg size">
+</div>
+</header>
+
+
+<div id="content">
 <div class="container-fluid">
 
 <div class="row">
-  <div class="push-down">
-  <div class="col-xs-12 col-md-12">
-    <h2 style="text-align: center; color: white; font-family: 'cavier'">
-      Testimonials
-    </h2>
+  <br/><br/><br/>
+  <br/><br/><br/>
+  <br/><br/><br/>
+    <div class="col-xs-12 col-md-12">
+      <h1 style="color: white; text-align: center; font-family: 'cavier'; font-size: 65px; font-weight: 900;">
+      What is Motiv8?
+      </h1>
+    </div>
 
-  <div class="col-xs-3 col-md-3"></div>
-  <div class="col-xs-1 col-md-1"></div>
-  <div class="col-xs-12 col-md-4">
-   <!--  <h5 style="text-align: center; color: white; font-family: 'cavier'">Motiv8 came to be naturally as a result of years of gathering maxims, and powerful aphorisms from the various books I've read. I found myself going back to these quotes periodically whenever I felt the need for some motivation and heightened thought. It only seemed natural to automate that process and create something to deliver a daily dose of it, thus Motiv8 was born.</h5>
-
-    <h5 style="text-align: center; color: white; font-family: 'cavier'">
-    The geography of my reading spans from business literature (economics, management, entrepreneurship, start-ups, leadership), to hard and soft sciences (psychology, physics, mathematics, statistics), all the way to spirtuality. I've gotten quite efficient at picking out the "Big Picture Points" in any given piece of literature. I hope that these gems of wisdom motivate, inspire and ultimately shape you 
-    to become a more well rounded, wise, and thoughtful human-being!</h5> -->
-  </div>
-  </div>
-  <br/><br/><br/><br/>
-
-  <div class="col-xs-12 col-md-12 email-input">
-   </div>
-  </div>
-</div>
+  <div class="col-xs-12 col-md-2"></div>
+  <div class="col-xs-12 col-md-2"></div>
+  <div class="col-xs-2 col-md-6"></div>
+  <div class=" col-md-4"></div>
+    <div class="col-xs-8 col-md-4">
+      <h4 style="color: white; text-align: center; font-weight: 500; font-family:'cavier'" id="goal" type="text" value="">
+        Motiv8 is a free social newsletter.<br/><br />
+        Sign-up and choose from a variety of newsletters that suit your interests. You can choose the frequency of emails and when you want to recieve them. You can also create your own newsletters to share with others. <br /><br />
+        <i class="fa fa-envelope-o" style="font-size: 30px;"></i> <span style-"font-size: 30px">+</span> <i class="fa fa-envelope" style="font-size: 30px;"></i> <span style-"font-size: 30px">=</span> <i class="fa fa-smile-o" style="font-size: 30px;"></i>
+      </h4>
+    </div>
 
 </div>
 </div>
