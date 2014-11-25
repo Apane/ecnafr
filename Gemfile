@@ -20,10 +20,18 @@ gem 'coffee-rails', '~> 4.0.0'
 # Bootstrap requirements
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 4.2.0'
+
+# Captcha
+gem "recaptcha", :require => "recaptcha/rails"
 
 # admin
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+
+# Sign up steps
+gem 'wicked', '~> 1.1.0'
+gem 'formtastic', '~> 3.1.0'
 
 # Newsletter gem
 gem 'nokogiri'
@@ -50,6 +58,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

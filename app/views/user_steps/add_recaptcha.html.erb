@@ -1,0 +1,40 @@
+<div id="content-signup">
+    <%= render 'layouts/messages' %>
+    <%= render 'layouts/headers/header_sign_up_step2' %>
+    <br/><br/>
+<div class="container">
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<div class="row">
+<div class="push-down">
+    <div class="col-xs-12 col-md-12">
+      <h1 style="color: white; text-align: center; font-family: 'cavier'; font-size: 65px; font-weight: 900;">
+
+      </h1>
+    </div>
+<h2 align="center" style="font-family: 'cavier'; padding-bottom: 10px;">Fill in the captcha</h2>
+<div class="signin-bg">
+<div class="col-xs-12 col-md-12">
+<div id="login">
+<fieldset class="clearfix">
+                 <div class="g-recaptcha" data-sitekey="6LeUQ_4SAAAAANicStPQ_OB68A-pr_EN3y3AF5UF"></div>
+          <div align="center"><%= recaptcha_tags %></div>
+            <%= form_for(@user, {url: update_user_steps_path(id: @user.to_param)}) do |f| %>
+            <br> 
+              <%= f.submit "Done", class: "get_motivated2" %>
+              <% end %>
+            </div>
+            </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+

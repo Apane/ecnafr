@@ -1,9 +1,16 @@
 class SubscribersController < ApplicationController
+  respond_to :html, :js
+
   def index
   end
 
   def new
     @subscriber = Subscriber.new
+    
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create

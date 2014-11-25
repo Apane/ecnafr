@@ -1,0 +1,11 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.fieldHolder {
+	background: asset-url("textfield.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 27px;
+    margin-bottom: 4px;
+    margin-top: 2px;
+    width: 191px;
+}

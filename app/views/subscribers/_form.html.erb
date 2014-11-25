@@ -1,17 +1,19 @@
 <%= form_for @subscriber do |f| %>
   <% if @subscriber.errors.any? %>
    <div class="errorExplanation">
-   <h2>Errors encountered with your account information:</h2>
-   <ul>
-   <% @subscriber.errors.full_messages.each do |m| %>
-   <li><%= m %></li>
+     <h2>Errors encountered with your account information:</h2>
+       <ul>
+         <% @subscriber.errors.full_messages.each do |m| %>
+         <li><%= m %></li>
+         <% end %>
+       </ul>
+    </div>
   <% end %>
-  </ul>
-  </div>
-  <% end %>
+  
   <p>
-  <%= f.label :email %><br />
-  <%= f.text_field :email %>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
   </p>
+  
   <%= f.submit %>
 <% end %>

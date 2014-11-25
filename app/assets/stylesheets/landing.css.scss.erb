@@ -14,109 +14,165 @@
 
 
 .email-input {
-	text-align: center;
-	color: black;
-	font-weight: bold;
-	font-size: 20px;
-	padding: 10px 5px 10px 5px;
+  text-align: center;
+  font-weight: bold;
+  padding: 7px 25px 7px 25px;
+  font-family: 'cavier';
+  margin-top: -6px;
+  margin-bottom: -5px;
+
     font-family: 'cavier';
+  text-align: center;
+  width: 260px;
+  margin: 0 auto;
+  font-size: 18px;
+  padding: 10px 5px 10px 5px;
+  -moz-osx-font-smoothing: grayscale;
+ 
+    color: black;
+}
+
+.email-input-login {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'cavier';
+  margin-top: 8px;
+  margin-bottom: 21px;
 }
 
 .email-input2 {
 	text-align: center;
 	color: black;
 	font-weight: bold;
-	font-size: 20px;
-	padding: 10px 36px 10px 36px;
-	    font-family: 'cavier';
+	font-size: 18px;
+	padding: 10px 50px 10px 50px;
+	font-family: 'cavier';
+  width: 260px;
+  margin-bottom: -5px;
+  margin: 0 auto;
+}
 
+.logo-style {
+    padding-right: -10px;
 }
 
 input {
-    border: 2px solid white; 
-   	border-radius: 10px;
-    padding: 7px 7px 7px 7px;
-	background: rgb(255, 255, 255) transparent;
-	/* nice browsers */
-	background: rgba(255, 255, 255, 0.8);  
-	margin: 0 0 10px 0;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+    border: 2px solid white;
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 7px;
 }
 
 .landing-bg {
-	background: asset-url("startupstock2.jpg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-      min-height: 100%;
-  min-width: 1024px;
-    
+	background: asset-url("login-bg.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+  min-width: 1024px; 
   /* Set up proportionate scaling */
   width: 100%;
-  height: auto;
-    
+  height: 700px;
   /* Set up positioning */
-  position: fixed;
   top: 0;
   left: 0;
+}
 
+#content {
+  background-image: linear-gradient(#e3262e, #ab171e);
+  height: 100vh;
+  vertical-align: middle;
+  text-align: center;
+  background-size: cover;
+  color: #fff;
+}
+
+#content-login {
+  background-color: #24c0ab;
+  height: 100vh;
+  vertical-align: middle;
+  text-align: center;
+  background-size: cover;
+  color: #fff;
+}
+
+#content-signup {
+  background-image: radial-gradient(circle, #36465d, #1b151f);
+  height: 100vh;
+  vertical-align: middle;
+  text-align: center;
+  background-size: cover;
+  color: #fff;
 }
 
 .landing-bg2 {
-	background: asset-url("startupstock1.jpg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 100%;
-    
-    /* Set up proportionate scaling */
-    width: 100%;
-    height: auto;
-    
-    /* Set up positioning */
-    position: fixed;
-    top: 0;
-    left: 0;
+	background: asset-url("write-bg.jpg") no-repeat center center fixed; 
+  height: 100vh;
+  vertical-align: middle;
+  text-align: center;
+  background-size: cover
 }
 
 .get_motivated {
-    font-family: 'cavier';
+  font-family: 'cavier';
 	text-align: center;
 	margin: 0 auto;
-	font-size: 30px;
-	padding: 5px 22px 5px 22px;
-	border-radius: 10px;
-    border-bottom: 3px solid #A52A2A;
+	font-size: 24px;
+	padding: 5px 41px 5px 41px;
+	border-radius: 1px;
+  border-bottom: 3px solid #A52A2A;
 }
 
-.get_motivated2 {
-    font-family: 'cavier';
+
+.get_motivated-original {
+  font-family: 'cavier';
 	text-align: center;
 	width: 260px;
 	margin: 0 auto;
 	font-size: 30px;
 	padding: 2px 5px 2px 5px;
+  background-color: #af151b;
+}
+
+.get_motivated2 {
+  font-family: 'cavier';
+  text-align: center;
+  width: 260px;
+  margin: 0 auto;
+  font-size: 30px;
+  padding: 2px 5px 2px 5px;
+  -moz-osx-font-smoothing: grayscale;
+    background-color: #ab171e;
+    background-image: linear-gradient(#e3262e, #ab171e);
+    border-color: #af151b #9a1015 #820a0f;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.34);
+    color: #fff;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.11);
 }
 
 /* The CSS */
 select {
-    padding:7px 40px 7px 40px;
-    margin: 0;
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    border-radius:10px;
+  padding:7px 40px 7px 40px;
+  margin: 0;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:1px;
 	background: rgb(255, 255, 255) transparent;
 	/* nice browsers */
 	background: rgba(255, 255, 255, 0.8);    
-    border:none;
-    outline:none;
-    display: inline-block;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
-    cursor:pointer;
-    border: 2px solid white; 
+  border:none;
+  outline:none;
+  display: inline-block;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  cursor:pointer;
+  border: 2px solid white; 
 }
 
 /* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
@@ -195,9 +251,86 @@ background-clip: padding-box;
    background: rgba(0,0,0,0.4);
 }
 
+
+.navbar-inverse {
+  background: transparent;
+
+}
+
 .alert-success {
     background-color: #d9534f;
     border-color: #a52a2a;
     color: white;
     text-align: center;
 }
+
+.alert-danger {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+    text-align: center;
+}
+
+ @keyframes cf3FadeInOut {
+  0% {
+  opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+div#scrolly {
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 1s;
+animation-direction: alternate;
+}
+
+div#scrolly {
+    left: 46.4%;
+    text-align: center;
+    top: 120px;
+    width: 100px;
+}
+
+div.scroll {
+  animation: fadeOne 2s ease infinite;
+  -moz-animation: fadeOne 2s ease infinite;
+  -o-animation: fadeOne 2s ease infinite;
+  -webkit-animation: fadeOne 2s ease infinite;
+  background: transparent asset-url("bg_arrow_scroll.png") 0 0 no-repeat;
+  height: 23px;
+  margin: 0 auto 5px;
+  filter: alpha(Opacity=10);
+  opacity: .8;
+  width: 44px;
+  }
+
+  div.scroll.two {
+animation-delay: .5s;
+-moz-animation-delay: .5s;
+-o-animation-delay: .5s;
+-webkit-animation-delay: .5s;
+}
+
+div.scroll.three {
+animation-delay: 1s;
+-moz-animation-delay: 1s;
+-o-animation-delay: 1s;
+-webkit-animation-delay: 1s;
+}
+
+#recaptcha_area, #recaptcha_table {
+width: 320px!important;
+text-align: center;
+margin-right: -30px;
+}
+

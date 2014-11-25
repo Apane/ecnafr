@@ -1,5 +1,6 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
+  before_action :set_category
   
   def index
     @quotes = Quote.all
@@ -13,7 +14,7 @@ class QuotesController < ApplicationController
   end
 
   def create
-    @quote = Quote.new(quote_params)
+    @quote = @category.build_quotes(quote_params)
     if @quote.save?
       redirect_to root_path, notice: "You've successfully added a quote"
     else
