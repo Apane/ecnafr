@@ -2,17 +2,16 @@ To DO List:
 
 User Stories
 
-
 The user clicks sign-up
 
-Step 1. 
+Step 1.
 
-Enter email address.
+Enter email address
 Enter Username
 
 Step 2.
 
-Enter validation.
+Enter validation
 
 The user signs into their own personal dashboard.
 
