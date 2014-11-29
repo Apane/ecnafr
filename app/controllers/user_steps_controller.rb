@@ -6,7 +6,7 @@ class UserStepsController < ApplicationController
   def update
     @user = current_user 
     if verify_recaptcha(:private_key => ENV['RECAPTCHA_PRIVATE_KEY'])
-      redirect_to root_path and return
+      redirect_to '/dashboard' || user_dashboard_path and return
       else
       flash.delete(:recaptcha_error)
       flash[:recaptcha_error] = 'The captcha did not match, please try again' 

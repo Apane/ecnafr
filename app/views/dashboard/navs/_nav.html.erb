@@ -1,0 +1,27 @@
+<body id="dashboard_index" class="is_dashboard identity base identity-refresh dashboard_index logged_in with_auto_paginate layout_standard" data-page-root="/dashboard" data-new-root="">
+
+<div class="l-header-container l-header-container--refresh" prima-component="header">
+  <div class="l-header ">
+    <h1 id="logo" class="logo ">
+      <a class="logo_anchor" href="/dashboard"></a>
+    </h1>
+
+  <div id="search_field" class="ui_search ">
+  </div>
+
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-loggedin-nav mineul pull-right" style="font-size:24px;margin-top:5px; color:white;">
+      <li><%= link_to root_path, :class => current_class?(root_path) do %><span class="fa fa-home fa-1x" id="homenav"></span>  <% end %>
+      </li>
+      <li><a href="#"><span class="fa fa-question-circle"></span>  </a></span></li>            
+      <li><%= link_to edit_user_registration_path, :class => current_class?(edit_user_registration_path) do %><span class="fa fa-cog fa-1x"></span> <% end %>
+      </li>
+      <li><%= link_to destroy_user_session_path, method: :delete, :class => current_class?(destroy_user_session_path) do %><span class="fa fa-circle-o-notch fa-1x"></span> <% end %>
+      </li>       
+    </ul>
+  </div>
+  </div>
+  </div>
+  </body>
+
+<br><br><br>

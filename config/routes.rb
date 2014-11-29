@@ -3,11 +3,19 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root to: "subscribers#new"
   get '/landing', to: "landing#index", as: 'landing_index'
 
   resources :categories do
     resources :quotes
+  end
+
+  authenticated :user do
+    get '/dashboard', to: 'dashboard#index', as: :dashboard
+    root to: "dashboard#index", as: :user_dashboard
+  end
+
+  unauthenticated :user do
+    root to: "subscribers#new"
   end
 
   get '/add_recaptcha', to: 'user_steps#add_recaptcha'
