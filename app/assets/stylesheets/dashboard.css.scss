@@ -35,7 +35,7 @@ html, body {
     top: 50px;
 }
 .l-header-container--refresh {
-background-color: #030033;
+    background-color: #f6f6f6;
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.13);
     position: fixed;
     transform: translateZ(0px);
@@ -72,7 +72,7 @@ background-color: #030033;
 }
 
 .logo .logo_anchor {
-    background-image: url("8logo.png");
+    background-image: url("redlogo.png");
     background-position: 0 50%;
     background-repeat: no-repeat;
     background-size: auto 31px;
@@ -122,12 +122,12 @@ a {
 
 
 .nav > li > a:hover, .nav > li > a:focus {
- 	background-color: #030033;
+ 	background-color: #f6f6f6;
 	color: #D99194;
 }
 
 .nav > li > a {
- 	background-color: #030033;
+ 	background-color: #f6f6f6;
 	color: #D99194;
 }
 
@@ -149,8 +149,8 @@ a {
 }
 
 .row-loggedin {
-    margin-left: 120px;
-    margin-right: 50px;
+    margin-left: 85px;
+    margin-right: 10px;
 }
 
 #left-side {
@@ -194,6 +194,56 @@ a {
 	text-decoration: none;
 }
 
+.nav.nav-pills > li.sub-nav > a {
+  background-color: white;
+  color: #d99194;    
+}
 
+.nav.nav-pills > li.sub-nav > a:hover {
+  color: #e3262e;  
+}
+
+.nav.nav-pills > li.sub-nav > a.current {
+  background-color: #e3262e;
+  color: white;
+}
+
+.createnewsletter {
+  background-color: #e3262e; 
+  padding: 15px;
+  text-align: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.createnewsletter > a {
+  color: white;
+  text-decoration: none;
+}
+
+.createnewsletter:hover {
+  background-color: #e3262e;
+  padding: 15px;
+  text-align: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.createnewsletter > a:hover {
+  color: white; 
+}
+
+a {
+    color: #e3262e;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e3262e;
+}
 
 

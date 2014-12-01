@@ -31,4 +31,3 @@ of emails received from once a day, to "Every", "1" all the way up to "10" hrs.
 
 Each Newsletter will have a bunch of content associated with it. So the users will receive a random curation
 of content from that newsletter.
-
