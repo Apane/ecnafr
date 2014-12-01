@@ -2,17 +2,16 @@ To DO List:
 
 User Stories
 
-
 The user clicks sign-up
 
-Step 1. 
+Step 1.
 
-Enter email address.
+Enter email address
 Enter Username
 
 Step 2.
 
-Enter validation.
+Enter validation
 
 The user signs into their own personal dashboard.
 
@@ -32,4 +31,3 @@ of emails received from once a day, to "Every", "1" all the way up to "10" hrs.
 
 Each Newsletter will have a bunch of content associated with it. So the users will receive a random curation
 of content from that newsletter.
-

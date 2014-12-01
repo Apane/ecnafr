@@ -78,12 +78,12 @@ input {
 }
 
 #content {
-  background-image: linear-gradient(#e3262e, #ab171e);
+  background-image: radial-gradient(circle, #f6f6f6, #1b151f);
   height: 100vh;
   vertical-align: middle;
   text-align: center;
   background-size: cover;
-  color: #fff;
+  color: black;
 }
 
 #content-login {
@@ -96,7 +96,7 @@ input {
 }
 
 #content-signup {
-  background-image: radial-gradient(circle, #36465d, #1b151f);
+  background-image: radial-gradient(circle, #f6f6f6, #1b151f);
   height: 100vh;
   vertical-align: middle;
   text-align: center;
@@ -200,38 +200,38 @@ body.modal-open,
 
 
 .modal-content {
-position: relative;
-background: -moz-linear-gradient(left, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
-background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(53, 53, 53, 0.88)), color-stop(100%, rgba(53, 53, 53, 0.88)));
-background: -webkit-linear-gradient(left, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
-background: -o-linear-gradient(left, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
-background: -ms-linear-gradient(left, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
-background: linear-gradient(to right, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0353535', endColorstr='#e0353535',GradientType=1 );
-border: none;
-border-radius: 0;
-outline: none;
--webkit-box-shadow: none;
-box-shadow: none;
-background-clip: padding-box;
+  position: relative;
+  background: -moz-linear-gradient(left, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(53, 53, 53, 0.88)), color-stop(100%, rgba(53, 53, 53, 0.88)));
+  background: -webkit-linear-gradient(left, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
+  background: -o-linear-gradient(left, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
+  background: -ms-linear-gradient(left, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
+  background: linear-gradient(to right, rgba(53, 53, 53, 0.88) 0%, rgba(53, 53, 53, 0.88) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0353535', endColorstr='#e0353535',GradientType=1 );
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-clip: padding-box;
 
 }
 
 .modal-content2 {
-position: relative;
-background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
-background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.60)), color-stop(100%, rgba(0, 0, 53, 0.60)));
-background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
-background: -o-linear-gradient(left, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
-background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
-background: linear-gradient(to right, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#000',GradientType=1 );
-border: none;
-border-radius: 0;
-outline: none;
--webkit-box-shadow: none;
-box-shadow: none;
-background-clip: padding-box;
+  position: relative;
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.60)), color-stop(100%, rgba(0, 0, 53, 0.60)));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#000',GradientType=1 );
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-clip: padding-box;
 
 }
 
@@ -247,6 +247,10 @@ background-clip: padding-box;
    background: rgba(0,0,0,0.4);
 }
 
+.navbar-loggedin-nav > li > a {
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
 
 .navbar-inverse {
   background: transparent;
@@ -254,16 +258,16 @@ background-clip: padding-box;
 }
 
 .alert-success {
-    background-color: #d9534f;
-    border-color: #a52a2a;
-    color: white;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+    border-color: white;
+    color: black;
     text-align: center;
 }
 
 .alert-danger {
-    background-color: #f2dede;
-    border-color: #ebccd1;
-    color: #a94442;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+    border-color: white;
+    color: black;
     text-align: center;
 }
 
@@ -272,22 +276,22 @@ background-clip: padding-box;
   opacity:1;
 }
 45% {
-opacity:1;
+  opacity:1;
 }
 55% {
-opacity:0;
+  opacity:0;
 }
 100% {
-opacity:0;
+  opacity:0;
 }
 }
 
 div#scrolly {
-animation-name: cf3FadeInOut;
-animation-timing-function: ease-in-out;
-animation-iteration-count: infinite;
-animation-duration: 1s;
-animation-direction: alternate;
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-direction: alternate;
 }
 
 div#scrolly {
@@ -311,22 +315,22 @@ div.scroll {
   }
 
   div.scroll.two {
-animation-delay: .5s;
--moz-animation-delay: .5s;
--o-animation-delay: .5s;
--webkit-animation-delay: .5s;
+  animation-delay: .5s;
+  -moz-animation-delay: .5s;
+  -o-animation-delay: .5s;
+  -webkit-animation-delay: .5s;
 }
 
 div.scroll.three {
-animation-delay: 1s;
--moz-animation-delay: 1s;
--o-animation-delay: 1s;
--webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
 }
 
 #recaptcha_area, #recaptcha_table {
-width: 320px!important;
-text-align: center;
-margin-right: -30px;
+  width: 320px!important;
+  text-align: center;
+  margin-right: -30px;
 }
 

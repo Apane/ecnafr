@@ -47,7 +47,7 @@
               </ul>
             </div>
           <% end %>
-        <%= f.select(:category_id, Category.all.map { |c| [c.name, c.id] }, {prompt: 'Select category'}, {class: 'styled email-input2'}) %>
+        <%= f.select(:category_id, Category.all.map { |c| [c.name, c.id] }, {prompt: 'Select category'}, {class: 'email-input2'}) %>
       </div>
     </h4>
   </div> 
@@ -56,7 +56,7 @@
 
   <div class="col-xs-12 col-md-12 email-input">
     <p>
-      <%= f.text_field :email, placeholder: "Email", class: "email-input"  %>
+      <%= f.text_field :email, placeholder: "Email", class: "email-input2"  %>
     </p>
   </div>
 
@@ -83,7 +83,7 @@
   <br/><br/><br/>
   <br/><br/><br/>
     <div class="col-xs-12 col-md-12">
-      <h1 style="color: white; text-align: center; font-family: 'cavier'; font-size: 65px; font-weight: 900;">
+      <h1 style="text-align: center; font-family: 'cavier'; font-size: 65px; font-weight: 900;">
       What is Motiv8?
       </h1>
     </div>
@@ -93,7 +93,7 @@
   <div class="col-xs-2 col-md-6"></div>
   <div class=" col-md-4"></div>
     <div class="col-xs-8 col-md-4">
-      <h4 style="color: white; text-align: center; font-weight: 500; font-family:'cavier'" id="goal" type="text" value="">
+      <h4 style="text-align: center; font-weight: 500; font-family:'cavier'" id="goal" type="text" value="">
        Motiv8 is a social newsletter. <br/>You can create and subscribe to newsletters that suit your interests.<br/>Set the frequency of emails you receive and when you want to receive them.
         <br /><br />
         <i class="fa fa-envelope-o" style="font-size: 30px;"></i> <span style-"font-size: 30px">+</span> <i class="fa fa-envelope" style="font-size: 30px;"></i> <span style-"font-size: 30px">=</span> <i class="fa fa-smile-o" style="font-size: 30px;"></i>

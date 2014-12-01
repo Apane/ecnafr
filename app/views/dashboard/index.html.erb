@@ -1,0 +1,45 @@
+<%= render 'dashboard/navs/nav' %>
+
+<div class="container">
+  <div class="row-loggedin">
+  <h3 style="color: #167ac6;">Welcome home, <%= link_to @user.email, edit_user_registration_path %></h3><br />
+  <div class="col-xs-12 col-md-8" id="center-side">
+  <ul class="nav nav-pills">
+  <li role="presentation" class="sub-nav"><%= link_to "Feed", root_path, :class => current_class?(root_path) %></li>
+  <li role="presentation" class="sub-nav"><a href="#">My Newsletters</a></li>
+  <li role="presentation" class="sub-nav"><a href="#">My Subscriptions</a></li>
+  <li role="presentation" class="sub-nav"><a href="#">Discover</a></li>
+</ul>
+<hr>
+
+    Right Pellentesque vel dui sed orci faucibus iaculis. Suspendisse dictum magna id purus tincidunt rutrum. Nulla congue. Vivamus sit amet lorem posuere dui vulputate ornare. Phasellus mattis sollicitudin ligula. Duis dignissim felis et urna. Integer adipiscing congue metus. Nam pede. Etiam non wisi. Sed accumsan dolor ac augue. Pellentesque eget lectus. Aliquam nec dolor nec tellus ornare venenatis. Nullam blandit placerat sem. Curabitur quis ipsum. Mauris nisl tellus, aliquet eu, suscipit eu, ullamcorper quis, magna. Mauris elementum, pede at sodales vestibulum, nulla tortor congue massa, quis pellentesque odio dui id est. Cras faucibus augue.rnare venenatis. Nullam blandit placerat sem. Curabitur quis ipsum. Mauris nisl tellus, aliquet eu, suscipit eu, ullamcorper qlementum, pede at sodales vestibulum, nulla tortor congue massa, quis pellentesque odio dui id est. Cras faucibus augue.bus iaculis. Suspendisse dictum magna id purus tincidunt rutrum. Nulla congue. Vivamus sit amet lorem posuere dui vulputate ornare. <br><br>
+  </div>
+  <div id="right_column" class="right_column">  
+  <div class="col-xs-12 col-md-3" id="right-side">
+  <ul>
+  <h4><li role="presentation" class="createnewsletter"><%= link_to root_path, :class => current_class?(root_path) do %><span class="fa fa-pencil-square-o fa-1x" style="color: white;"></span> Create Newsletter</li></h4> 
+  <% end %>
+  </ul>
+  </div>
+  </div>
+
+  <div id="right_column" class="right_column">  
+    <div class="col-xs-12 col-md-3" id="right-side">
+    <ul>
+      <li><a href="#" style="font-size: 16px;"><span class="fa fa-newspaper-o fa-1x"></span> Posts </a></span></li> 
+      <li><a href="#" style="font-size: 16px;"><span class="fa fa-search fa-1x"></span> Browse Newsletters </a></span></li> <li><a href="#" style="font-size: 16px;"><span class="fa fa-thumbs-up fa-1x"></span> Popular Newsletters </a></span></li>
+    </ul>
+    </div>
+  </div>
+
+  <div id="right_column" class="right_column">  
+    <div class="col-xs-12 col-md-3" id="right-side">
+    <ul>
+      <li><a href="#" style="font-size: 16px;"><span class="fa fa-newspaper-o fa-1x"></span> Trending </a></span></li>            
+      <li><a href="#" style="font-size: 16px;"><span class="fa fa-search fa-1x"></span> Most Recent </a></span></li> <li><a href="#" style="font-size: 16px;"><span class="fa fa-thumbs-up fa-1x"></span> New users </a></span></li>
+    </ul>
+    </div>
+  </div>
+
+  </div>
+</div>

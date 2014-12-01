@@ -1,42 +1,48 @@
 <div id="content-signup">
     <%= render 'layouts/messages' %>
     <%= render 'layouts/headers/header_login' %>
-    <br/><br/>
-<div class="container">
-<br><br>
-<br><br>
-<br><br>
-<div class="row">
-<div class="push-down">
+  <br/><br/>
+
+  <div class="container">
+  <br><br>
+  <br><br>
+  <br><br>
+  
+  <div class="row">
+    <div class="push-down">
     <div class="col-xs-12 col-md-12">
       <h1 style="color: white; text-align: center; font-family: 'cavier'; font-size: 65px; font-weight: 900;">
 
       </h1>
     </div>
-<h2 align="center" style="font-family: 'cavier'; padding-bottom: 10px;">Log in</h2>
-<div class="signin-bg">
-<div class="col-xs-12 col-md-12">
-<div id="login">
-<fieldset class="clearfix">
-            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-              <p>
-              <span class="fontawesome-user"></span>
-              <%= f.text_field :email, autofocus: true, placeholder: "Email"  %>
-              </p>
-              <p>
-              <span class="fontawesome-lock"></span>
-              <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
-              </p>
-              <% if devise_mapping.rememberable? -%>
-                <div><%= f.check_box :remember_me %> <%= f.label :remember_me %>
-                </div>
-              <% end -%>
-              <%= f.submit "Log in", class: "get_motivated2" %>
-             <% end %>
-            </fieldset>
+
+  <h2 align="center" style="font-family: 'cavier'; padding-bottom: 10px;">Log in</h2>
+  <div class="signin-bg">
+    <div class="col-xs-12 col-md-12">
+    <div id="login">
+    <fieldset class="clearfix">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <p>
+        <span class="fontawesome-user"></span>
+        <%= f.text_field :email, autofocus: true, placeholder: "Email"  %>
+        </p>
+        <p>
+        <span class="fontawesome-lock"></span>
+        <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+        </p>
+        <% if devise_mapping.rememberable? -%>
+        <div><%= f.check_box :remember_me %> <%= f.label :remember_me %>
         </div>
-      </div>
+        <% end -%>
+        <%= f.submit "Log in", class: "get_motivated2" %>
+      <% end %>
+    </fieldset>
+    </div>
     </div>
   </div>
+    </div>
+  </div>
+  </div>
 </div>
-</div>
+
+
