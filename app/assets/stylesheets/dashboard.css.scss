@@ -35,7 +35,7 @@ html, body {
     top: 50px;
 }
 .l-header-container--refresh {
-    background-color: #f6f6f6;
+    background-color: #fff;
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.13);
     position: fixed;
     transform: translateZ(0px);
@@ -122,12 +122,12 @@ a {
 
 
 .nav > li > a:hover, .nav > li > a:focus {
- 	background-color: #f6f6f6;
+ 	background-color: #fff;
 	color: #D99194;
 }
 
 .nav > li > a {
- 	background-color: #f6f6f6;
+ 	background-color: #fff;
 	color: #D99194;
 }
 
@@ -179,6 +179,7 @@ a {
     background: rgba(255,255,255,0.9);    
     margin-bottom: 8px;
     margin-left: 8px;
+    font-weight: regular;    
 }
 
 .nav > li > a.current {
@@ -186,17 +187,41 @@ a {
 }
 
 #right-side > ul > li > a {
-	color: #444;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
+    text-transform: none;
+    top: -11px;
+
+  background: inherit;
+    color: #e3262e; 
+    float: right;
+    margin-right: -15px;
+    margin-top: -8px;
+    opacity: 1;
+    padding-bottom: 20px;
+    position: relative;
+    transition: opacity 200ms ease 0s;
+    width: 261px;
+    padding-left: 10px;    
+    height: 40px; 
+    color: black;   
 }
 
 #right-side > ul > li > a:hover {
-	color: #444;
+	color: white;
 	text-decoration: none;
+    background: #6a6b6e;
 }
 
 .nav.nav-pills > li.sub-nav > a {
   background-color: white;
-  color: #d99194;    
+  color: black;  
+  font-weight: regular;
 }
 
 .nav.nav-pills > li.sub-nav > a:hover {
@@ -206,6 +231,7 @@ a {
 .nav.nav-pills > li.sub-nav > a.current {
   background-color: #e3262e;
   color: white;
+  font-weight: bold;
 }
 
 .createnewsletter {
@@ -238,12 +264,12 @@ a {
 }
 
 a {
-    color: #e3262e;
+    color: #7ba939;
     text-decoration: none;
 }
 
 a:hover {
-    color: #e3262e;
+    color: #7ba939;
 }
 
 
