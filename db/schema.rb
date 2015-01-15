@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141122014950) do
+ActiveRecord::Schema.define(version: 20141210183212) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,25 @@ ActiveRecord::Schema.define(version: 20141122014950) do
     t.integer  "category_type"
   end
 
+  create_table "newsletters", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "newsletter_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "quote_histories", force: true do |t|
     t.integer  "subscriber_id"
     t.integer  "quote_id"
@@ -83,9 +102,17 @@ ActiveRecord::Schema.define(version: 20141122014950) do
     t.integer  "category_id"
     t.string   "unsubscribe_hash"
     t.boolean  "subscription",     default: true
+    t.integer  "newsletter_id"
   end
 
   add_index "subscribers", ["category_id"], name: "index_subscribers_on_category_id", using: :btree
+
+  create_table "subscriptions", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "newsletter_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

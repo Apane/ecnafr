@@ -1,0 +1,18 @@
+  <div id="right_column" class="right_column">  
+  <div class="col-xs-12 col-md-3" id="right-side">
+  <ul>
+  <h4><li role="presentation" class="createnewsletter"><%= link_to new_newsletter_post_path(@newsletter, @post, anchor: 'newpost'), :class => current_class?(new_newsletter_post_path(@newsletter, @post)),  "data-no-turbolink" => true  do %><span class="fa fa-pencil-square-o fa-1x" style="color: white;"></span> New Post</li></h4> 
+  <% end %>
+  </ul>
+  </div>
+  </div>
+
+<div id="right_column" class="right_column">  
+  <div class="col-xs-12 col-md-3" id="right-side">
+  <ul>
+   <li><a href="#" style="font-size: 16px;"><span class="fa fa-newspaper-o fa-1x"></span> Popular Newsletters </a></span></li>            
+    <li><a href="#" style="font-size: 16px;"><span class="fa fa-search fa-1x"></span> Most Recent Newsletters </a></span></li>
+  </ul>
+  </div>
+</div>
+

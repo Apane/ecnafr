@@ -1,0 +1,62 @@
+<%= render 'dashboard/navs/nav' %>
+
+<style type="text/css" media="screen">
+td.stat_head{
+  color: white;
+  background: #167ac6;
+  border-color: white;
+  width: auto;
+  height: 3rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+td.stat_head > a {
+    color: white;
+}
+</style>
+
+<div class="container">
+  <div class="row-loggedin">
+  <h3 style="color: #167ac6;">Your posts from, <u><%= @newsletter.name %></u> newsletter</h3><br />
+  <div class="col-xs-12 col-md-8" id="center-side">
+  <%= render 'layouts/navbar_pills/navpills' %>
+<hr>
+<ol>
+
+<table id="table_3" class="table table_output">
+  <thead>
+    <tr>
+      <td class="stat_head">Post title</td>
+      <td class="stat_head">Created at (click to sort)</td>
+    </tr>
+  </thead>
+  <tbody>
+   <% if @posts.any? %>
+   <% @newsletter.posts.each do |post|  %>
+    <tr>
+      <td><%= link_to post.title, newsletter_post_path(@newsletter, post) %></td>
+      <td><%= post.present? ? post.created_at.strftime("%b %e, %Y %l:%M%P") : ' - ' %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+  <% else %>
+  <br />
+  <h3>You haven't created any posts yet.<br> Click <%= link_to 'here', new_newsletter_post_path(@newsletter.id) %> to create one. </h3>
+<% end %>
+<br /><br />
+</ol>
+ <br><br>
+  </div>
+ 
+  <%= render 'dashboard/navs/posts_nav' %>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $('#table_3').dynatable({features: {paginate: false, pushState: false, recordCount: false, search: false, perPageSelect: false}});
+});
+</script>

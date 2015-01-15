@@ -1,0 +1,69 @@
+<%= render 'dashboard/navs/nav' %>
+
+<style type="text/css" media="screen">
+td.stat_head{
+  color: white;
+  background: #167ac6;
+  border-color: white;
+  width: auto;
+  height: 3rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+td.stat_head > a {
+    color: white;
+}
+</style>
+
+<div class="container">
+  <div class="row-loggedin">
+  <h3 style="color: #167ac6;">Welcome home, <%= link_to current_user.email, edit_user_registration_path %></h3><br />
+  <div class="col-xs-12 col-md-8" id="center-side">
+  <%= render 'layouts/navbar_pills/navpills' %>
+<hr>
+<ol>
+  <% if @newsletters.any? %>
+
+<table id="table_3" class="table table_output">
+  <thead>
+    <tr>
+      <td class="stat_head">Newsletter name & posts</td>
+      <td class="stat_head">Newsletter image</td>
+      <td class="stat_head">Subscribers</td>      
+      <td class="stat_head">Created at (click to sort)</td>
+      <td class="stat_head">Delete</td>            
+    </tr>
+  </thead>
+  <tbody>
+  <% @newsletters.each do |newsletter| %>
+    <tr>
+      <td><li><%= link_to newsletter.name, newsletter_posts_path(newsletter.id) %></li></td>
+      <td><li><%= image_tag newsletter.image.url(:thumb) %></li></td>
+      <td><%= 1 %></td>
+      <td><%= newsletter.present? ? newsletter.created_at.strftime("%b %e, %Y %l:%M%P") : ' - ' %></td>
+      <td><%= link_to 'Delete newsletter', user_newsletter_path(@user, newsletter), :method => :delete,
+            data: {:confirm => 'Are you sure?'} %></td>            
+    </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+  <% else %>
+  <br />
+  <h3>You haven't created any newsletters yet.<br> Click <%= link_to 'here', new_user_newsletter_path(@user.id) %> to create one. </h3>
+<% end %>
+</ol>
+ <br><br>
+  </div>
+
+  <%= render 'dashboard/navs/right_nav' %>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $('#table_3').dynatable({features: {paginate: false, pushState: false, recordCount: false, search: false, perPageSelect: false}});
+});
+</script>

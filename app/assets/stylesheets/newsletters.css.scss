@@ -1,0 +1,70 @@
+// Place all the styles related to the newsletters controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.newsletter-name {
+  background: #f6f6f6;
+  width: 260px;
+  font-size: 24px;
+  padding: 2px 5px 2px 5px;
+  -moz-osx-font-smoothing: grayscale;
+    border: 1px dotted #c3c3c3;
+    border-width: 1px;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.34);
+    color: black;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.11);	
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.next-button {
+  font-family: 'cavier';
+  text-align: center;
+  width: 260px;
+  font-size: 30px;
+  padding: 2px 5px 2px 5px;
+  -moz-osx-font-smoothing: grayscale;
+    background-color: #ab171e;
+    background-image: linear-gradient(#e3262e, #ab171e);
+    border-color: #af151b #9a1015 #820a0f;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.34);
+    color: #fff;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.11);
+}
+
+.post-body {
+  background: gray;
+  font-size: 18px;
+  padding: 5px 8px 5px 8px;
+  margin-bottom: 5px;
+  -moz-osx-font-smoothing: grayscale;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.34);
+    color: #fff;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.11);	
+}
+
+#table_3 tr:nth-child(even) { background: #f6f6f6}
+
+.image-uploads {
+ font-family: 'cavier';
+  text-align: center;
+  width: 260px;
+  font-size: 30px;
+  padding: 5px 5px 5px 5px;
+  -moz-osx-font-smoothing: grayscale;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.34);
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.11);
+    margin:0 auto;
+    margin-right: 160px;    
+}
+
+.img-size {
+	width: 250px;
+	height: 200px;
+	margin-right: 20px;
+}
+

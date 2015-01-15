@@ -9,6 +9,17 @@ Rails.application.routes.draw do
     resources :quotes
   end
 
+  resources :users do
+    resources :newsletters
+  end
+
+  resources :newsletters do
+    resources :posts
+    resources :subcriptions, only: [:create, :destroy]
+  end
+
+  get '/my_newsletters', to: 'newsletters#my_newsletters', as: 'my_newsletters'
+
   authenticated :user do
     get '/dashboard', to: 'dashboard#index', as: :dashboard
     root to: "dashboard#index", as: :user_dashboard
@@ -25,6 +36,8 @@ Rails.application.routes.draw do
   patch '/user_steps', to: 'user_steps#update', as: 'update_user_steps'
 
   get 'subscribers/unsubscribe/:unsubscribe_hash' => 'subscribers#unsubscribe', :as => 'unsubscribe'
+  get 'toggle_subscription' => 'subscriptions#toggle_subscription'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

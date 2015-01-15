@@ -2,6 +2,7 @@ class Subscriber < ActiveRecord::Base
   before_create :add_unsubscribe_hash
 
   belongs_to :category  
+  belongs_to :newsletter
   has_many :quote_histories
 
   validates :category_id, presence: true

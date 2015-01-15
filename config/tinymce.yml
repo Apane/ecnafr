@@ -1,0 +1,9 @@
+toolbar:
+  - styleselect | cut copy paste pastetext pasteword | bold italic | undo redo | alignleft aligncenter alignright | fontsizeselect | fontselect
+
+# toolbar:
+#   - table | fullscreen
+plugins:
+  - spellchecker
+  # - table
+  # - fullscreen

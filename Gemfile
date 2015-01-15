@@ -22,6 +22,16 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 4.2.0'
 
+#Log mgmt
+gem 'quiet_assets', group: :development
+
+#Text editor
+gem 'tinymce-rails'
+
+#Image uploading
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'aws-sdk', '~> 1.5.7'
+
 # Captcha
 gem "recaptcha", :require => "recaptcha/rails"
 

@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require tinymce-jquery
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require dashboard.js.coffee
+//= require jquery.dynatable.js
 //= require_tree .
 
 $(document).ready(function() {

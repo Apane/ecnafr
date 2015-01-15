@@ -1,0 +1,57 @@
+<%= render 'dashboard/navs/nav' %>
+
+<div class="container">
+  <div class="row-loggedin">
+  <div class="col-xs-2 col-md-2" style="margin-left:-35px;"></div>
+  <div class="col-xs-12 col-md-8" id="center-side" style="text-align: center; ">
+  <%= form_for [@user, @newsletter], :html => { :multipart => true } do |f| %>
+  <% if @newsletter.errors.any? %>
+  <div class="errorExplanation" style="color: gray;">    
+    <h1><%= pluralize(@newsletter.errors.count, 'error') %> encountered:</h1>
+    <ul>
+    <% @newsletter.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+    </ul>
+    </div>
+  <% end %>
+  <div>
+  <h2>Step 1.</h2>
+  <hr>
+  <h4 style="margin-right: 20px;">Name your newsletter<br />
+  & upload an image for it</h4><br />
+
+  <div style="color: gray; font-size: 10px; margin-bottom: 10px; margin-right: 20px;">**** Required ****</div>
+  <%= f.text_field :name, class: "newsletter-name", placeholder: "Name it here" %><br />
+  <div style="color: gray; font-size: 10px; margin-bottom: 10px; margin-right: 20px;">**** Required ****</div>
+  <div class="image-uploads"><%= f.file_field :image %></div>
+  <div style="color: gray; font-size: 10px; margin-bottom: 10px; margin-right: 20px;">Image preview</div>
+  <img id="blah" class="img-size" src="http://thuthuat365.com/wp-content/uploads/2014/08/photo_default_0.png" alt="********* No image uploaded yet *********" /><br><br>
+  <%= f.submit "Next", class: "next-button" %>
+  <br><br>
+  </div>
+  <% end %>
+
+  <script>
+  function readURL(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#newsletter_image").change(function(){
+    readURL(this);
+});
+</script>
+
+  </div>
+  </div>
+
+</div>

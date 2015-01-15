@@ -3,5 +3,6 @@ class DashboardController < ApplicationController
 
   def index
     @user = current_user
+    @newsletters = Newsletter.all
   end
 end

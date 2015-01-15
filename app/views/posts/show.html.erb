@@ -1,0 +1,42 @@
+<%= tinymce_assets %>
+<%= render 'dashboard/navs/nav' %>
+
+<div class="container">
+  <div class="row-loggedin">
+  <div class="col-xs-2 col-md-2" style="margin-left:40px;"></div>
+  <div class="col-xs-10 col-md-6" id="center-side" style="text-align: center;">
+  <%= form_for [@newsletter, @post] do |f| %>
+  <% if @post.errors.any? %>
+  <div class="errorExplanation" style="color: white;">    
+    <h1><%= pluralize(@newsletter.errors.count, 'error') %> encountered:</h1>
+    <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+    </ul>
+    </div>
+  <% end %>
+  <div>
+
+  <script>
+  tinyMCE.init({
+    // plugins: "AtD",
+    selector: "textarea.tinymce",
+    toolbar: ["styleselect | cut copy paste pastetext pasteword | bold italic | undo redo | alignleft aligncenter alignright | fontsizeselect | fontselect"],
+    gecko_spellcheck: true
+  });
+  </script>
+
+  <h2 style="margin-right: 20px;"><%= @post.title %></h2>
+  <h6><%= raw(@post.body) %></h6>
+
+  <%= link_to 'Edit', edit_newsletter_post_path(@newsletter, @post),  "data-no-turbolink" => true  %>
+
+  <br><br>
+  </div>
+  <% end %>
+
+  </div>
+  </div>
+
+</div>

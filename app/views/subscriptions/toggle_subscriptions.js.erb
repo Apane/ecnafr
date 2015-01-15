@@ -1,0 +1,10 @@
+button = $('.favorite_button')
+<% if params[:action_type] == 'remove' %>
+  button.text('Subscribe');
+  button.attr('href', '/toggle_subscription?action_type=add&subscription_id=<%= @subscription_id %>');
+<% elsif params[:action_type] == 'add' %>
+  button.text('Un-subscribe');
+  button.attr('href', '/toggle_subscription?action_type=remove&subscription_id=<%= @subscription_id %>');
+<% else %>
+  alert('something went wrong!');
+<% end %>
